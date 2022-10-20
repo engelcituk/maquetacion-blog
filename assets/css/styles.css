@@ -69,11 +69,32 @@
 }
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme {
+  --first-color-dark: hsl(var(--hue-color), 8%, 20%);
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --title-color: hsl(var(--hue-color), 4%, 95%);  
+  --text-color: hsl(var(--hue-color), 4%, 75%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --container-color: hsl(var(--hue-color), 8%, 6%);
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --box-shadow: 2px 2px 18px rgb(hsl(var(--hue-color)));
+  --text-color: hsl(var(--hue-color), 12%, 36%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+}
 
 /*========== Button Dark/Light ==========*/
+.change_theme{
+  color: var(--title-color);
+  font-size: 1.15rem;
+  cursor: pointer;
+}
 
-
+.nav_btns{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 /*==================== BASE ====================*/
 * {
   box-sizing: border-box;
@@ -187,29 +208,77 @@ img {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav_menu{
     position: fixed;    
     background-color: var(--container-color);
     width: 80%;
     height: 100%;
     top: 0;
-    /* right: -100%; */
-    box-shadow: -2px 0 4px hsl(var(--hue-color), 24%, 15%, .1);
-    padding: 4rem 0;
+    right: -100%;
+    box-shadow: -2px 0 4px hsla(var(--hue-color), 24%, 15%, .1);
+    padding: 4rem 0 0 3rem;
     border-radius: 1rem 0 0 1rem;
     transition: .3s;
     z-index: var(--z-fixed);
   }  
 }
-/* show menu */
 
+.nav_close{
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  cursor: pointer;
+}
+
+.nav_close{
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  cursor: pointer;
+}
+
+.nav_list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.nav_link{
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: .3s;
+}
+
+.nav_link:hover{
+  color: var(--first-color);
+}
+/* show menu */
+.show_menu{
+  right: 0;
+}
 
 /* Active link */
+.active_link{
+  position: relative;
+  color: var(--first-color);
+}
 
-
+.active_link::after{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  width: 70%;
+  height: 2px;
+  background-color: var(--first-color);
+}
 /* Change background header */
-
+.scroll_header{
+  box-shadow: 0 1px 4px hsla(var(--hue-color), 4%, 15%, .1);  
+}
 
 /*==================== HOME ====================*/
 
