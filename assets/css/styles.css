@@ -57,15 +57,15 @@
 
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
 }
 
 /*========== Variables Dark theme ==========*/
@@ -156,7 +156,52 @@ img {
 
 /*==================== NAV ====================*/
 
+.nav{
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.nav_logo, .nav_toggle, .nav_close{
+  color: var(--title-color);
+}
+
+.nav_logo{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px;
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  transition: .3s;
+}
+
+.nav_logo:hover{
+  color: var(--first-color);
+}
+
+.nav_toggle{
+  display: inline-flex;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_menu{
+    position: fixed;    
+    background-color: var(--container-color);
+    width: 80%;
+    height: 100%;
+    top: 0;
+    /* right: -100%; */
+    box-shadow: -2px 0 4px hsl(var(--hue-color), 24%, 15%, .1);
+    padding: 4rem 0;
+    border-radius: 1rem 0 0 1rem;
+    transition: .3s;
+    z-index: var(--z-fixed);
+  }  
+}
 /* show menu */
 
 
