@@ -47,7 +47,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
-const scrollHeader = () => {
+const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono que no sea fleca y el window a this
     const header = document.getElementById('header')
     if(window.scrollY >= 80){
         header.classList.add('scroll_header')
@@ -69,7 +69,7 @@ const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-sun' : 'bx-moon'
 
 if(selectedTheme){
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
