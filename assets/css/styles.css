@@ -666,7 +666,7 @@ img {
   display: block;
 }
 
-.qualification_button.qualification_active{
+.qualification_button.qualification_active{ 
   color: var(--first-color);
 }
 /*==================== SERVICES ====================*/
