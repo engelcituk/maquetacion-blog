@@ -131,7 +131,7 @@ let swiperTestimonial = new Swiper('.testimonial_container',{
 
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
-const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono que no sea fleca y el window a this
+const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono que no sea flecha y el window a this
     const header = document.getElementById('header')
     if(window.scrollY >= 80){
         header.classList.add('scroll_header')
@@ -142,7 +142,15 @@ const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono qu
 
 window.addEventListener('scroll', scrollHeader)
 /*==================== SHOW SCROLL UP ====================*/ 
-
+const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up')
+    if (this.scrollY >= 560) {
+      scrollUp.classList.add('show_scroll')
+    } else {
+      scrollUp.classList.remove('show_scroll')
+    }
+  }
+  window.addEventListener('scroll', scrollUp) 
 
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
