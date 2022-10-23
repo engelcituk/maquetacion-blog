@@ -123,7 +123,7 @@ let swiperTestimonial = new Swiper('.testimonial_container',{
 
     breakpoints:{
         568:{
-            slidesPerView: 1,
+            slidesPerView: 2,
         }
     }
 })
