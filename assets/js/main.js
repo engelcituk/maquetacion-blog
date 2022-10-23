@@ -128,7 +128,24 @@ let swiperTestimonial = new Swiper('.testimonial_container',{
     }
 })
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
+function scrollActive(){
+  const scrollY = window.pageYOffset 
+
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight,
+          sectionTop = current.offsetTop - 58,
+          sectionId = current.getAttribute('id')
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active_link')
+    } else {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active_link')
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive)
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono que no sea flecha y el window a this
