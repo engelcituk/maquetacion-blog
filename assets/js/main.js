@@ -130,7 +130,7 @@ let swiperTestimonial = new Swiper('.testimonial_container',{
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+const scrollActive = ()=> {
   const scrollY = window.pageYOffset 
 
   sections.forEach(current =>{
