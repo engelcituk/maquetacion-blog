@@ -1,0 +1,17 @@
+@import "base.css";
+
+/*==================== BLOG ====================*/
+.wrapper-blog{  
+  grid-template-columns: 300px 950px 300px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 0px;
+  max-width: 100%;
+  margin-top: calc(var(--header-height) + 1.5rem);
+}
+
+.hqNOeV {
+  position: relative;
+  z-index: 2
+}
+
