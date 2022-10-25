@@ -285,6 +285,7 @@ img {
   padding: 4rem 0 2rem;
 }
 
+
 .blog__separator{
   width: 100%;
   align-self: center;
@@ -303,6 +304,7 @@ img {
 .section__subtitle--blog{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .blog_detail{
@@ -323,12 +325,25 @@ img {
 }
 
 .blog_author-category{
-  background-color: var(--first-color-second);
+  background-color: rgba(0, 158, 247, 1);
   border-radius: 5px;
-  padding: .5rem 1rem;
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  padding: .3rem .5rem;
+  font-size: .7rem;
+  color: #FFF;
 }
+.badge-primary{
+  background-color: rgba(0, 158, 247, 1);
+}
+
+.blog_relateds{
+  margin-top: var(--mb-1);
+}
+
+/* .border-card{
+  border: 1px dashed var(--title-color);
+  padding: .5rem;
+  border-radius: .5rem;
+} */
 
 
 
