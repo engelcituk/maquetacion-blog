@@ -74,11 +74,8 @@
                         </div>
                     </div>
                     <div class="content_article grid_article">
-                        <p>Fundamentally, the goal of CSS is to allow you to control the appearance and layout of your app's
-                            content.
-                          </p>
-                          <p>You don't quite start with a blank canvas; HTML tags do include a few minimal styles. For example, here
-                            are the built-in styles for <code>&lt;a&gt;</code> tags, in Chrome 86:
+                        <p>Fundamentally, the goal of CSS is to allow you to control the appearance and layout of your app's content.</p>
+                        <p>You don't quite start with a blank canvas; HTML tags do include a few minimal styles. For example, here are the built-in styles for <code>&lt;a&gt;</code> tags, in Chrome 86:</p>
 
 <pre><code class="language-css">a {
     color: -webkit-link;
@@ -86,14 +83,10 @@
     text-decoration: underline;
 }</code></pre>
 
-                              <p>These styles are part of the <em class="enfasis_em">user-agent stylesheet</em>. Each browser
-                                includes their own stylesheet full of base styles like this. There are some hard rules in the HTML
-                                specification, but for the most part, each browser comes up with its own default styles. That's why focus
-                                rings look so different across browsers!
-                              </p><p>If you've ever used a css reset, it's to "flatten out" the user-agent
-                                stylesheets across different browsers, and ensure that every browser starts with the same core set of
-                                styles.
-                              </p>
+                        <p>These styles are part of the <em class="enfasis_em">user-agent stylesheet</em>. Each browser includes their own stylesheet full of base styles like this. There are some hard rules in the HTML specification, but for the most part, each browser comes up with its own default styles. That's why focus rings look so different across browsers!
+                        </p>
+                        <p>If you've ever used a css reset, it's to "flatten out" the user-agent stylesheets across different browsers, and ensure that every browser starts with the same core set of styles.</p>
+
 <pre><code class="language-php">public function store(Request $request){
     //validar formulario
     $data = $request->validate([
@@ -112,14 +105,14 @@
 
     return back()->with('userCreated', 'El usuario ha sido creado');                    
 }</code></pre>
-                        <p>Notice that there's an <code>&lt;em&gt;</code> tag wrapping around the word <code>you</code>.
-                        </p><p>How come the word <code>you</code> is coloured pink? If you think about it, we haven't applied any styles
-                        to the <code>em</code> element, only to paragraphs.
-                        </p><p>The answer is that <em>certain</em> CSS properties <em class="enfasis_em">inherit</em>. When
+                        <p>Notice that there's an <code>&lt;em&gt;</code> tag wrapping around the word <code>you</code>.</p>
+                        <p>How come the word <code>you</code> is coloured pink? If you think about it, we haven't applied any styles
+                        to the <code>em</code> element, only to paragraphs.</p>
+                        <p>The answer is that <em>certain</em> CSS properties <em class="enfasis_em">inherit</em>. When
                         I apply a <code>color</code> to an element, that value gets passed down to all children and
-                        grand-children.
-                        </p><p>Not all CSS properties are inheritable, though. Let's look at another example:
-                        </p>
+                        grand-children.</p>
+                        <p>Not all CSS properties are inheritable, though. Let's look at another example:</p>
+
 <pre><code class="language-js">
 const sections = document.querySelectorAll('section[id]')
 
@@ -152,19 +145,17 @@ const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono qu
 
 window.addEventListener('scroll', scrollHeader)</code></pre>
 
-                <aside class="Aside__InfoAside-nhl37o-1 bnRuYA cAXqSm iOVTZG">
-                    <div class="Aside__IconWrapper-nhl37o-5 WWVhl">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="16" x2="12" y2="12"></line>
-                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                        </svg>
-                    </div>
-                <strong class="Aside__Title-nhl37o-4 eeflGT">Chrome's source code</strong>
-              <p>If you're curious to learn more about the user-agent stylesheet, you can view the <a target="_blank" rel="noopener noreferrer" href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/html/resources/html.css" class="TextLink__Anchor-sc-8b2q1k-0 jxajTe">full stylesheet for the Chrome browser</a>, from its
-                source code.
-              </p><p>This stylesheet includes lots of obscure CSS. It's interesting, in an academic sense, but there's not
-                much practical benefit in studying it.</p>
+                        <aside class="alert-note article_note article_note--container article_note--border-left">
+                            <div class="alert-note--icon-color article_note--icon">
+                                <i class="uil uil-info-circle"></i>
+                            </div>
+                            <strong class="article_note--title">Chrome's source code</strong>
+                            <p>
+                                If you're curious to learn more about the user-agent stylesheet, you can view the <a target="_blank" rel="noopener noreferrer" href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/html/resources/html.css" class="article_note--link">full stylesheet for the Chrome browser</a>, from its source code.
+                            </p>
+                            <p>
+                                This stylesheet includes lots of obscure CSS. It's interesting, in an academic sense, but there's not much practical benefit in studying it.
+                            </p>
                         </aside>
                     </div>
                 </div>
