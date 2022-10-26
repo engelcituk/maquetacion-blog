@@ -9,8 +9,10 @@
     
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="./css/blog.css">
+        <link rel="stylesheet" href="./css/prism.css">
 
-        <title>Mi portfolio</title>
+
+        <title>Mi Blog</title>
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -54,20 +56,107 @@
             </nav>                        
         </header>
 
+        <!-- #0d0f12 -->
        <div class="grid wrapper-blog">
-        <div class="hqNOeV">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex corporis esse enim non debitis. Nobis illum porro, eum, error ad, hic sequi laboriosam vel dolores eveniet doloremque necessitatibus officiis harum.
-        </div>                
-        <main>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates fugiat ipsam voluptas illum reiciendis veniam totam nam porro velit blanditiis, molestias sequi aut alias laboriosam inventore nulla accusantium possimus? Maxime.
-            Itaque incidunt perspiciatis nemo similique quisquam temporibus quo cum, aliquam error reiciendis nihil cupiditate magni dignissimos quis eligendi dolorem eveniet animi sunt minus laborum delectus voluptatum distinctio unde sapiente. Saepe?
-            Cupiditate excepturi sed earum consequatur. Temporibus soluta molestias possimus deleniti quos nam, nulla facere. Cumque ea quos debitis magnam veritatis omnis doloremque deserunt illum! Iste minima totam odio exercitationem autem.
-            Excepturi natus alias numquam, officia dolores magnam quibusdam ducimus debitis vero quasi nisi quo beatae nulla nam sequi maiores esse culpa libero cum repudiandae cupiditate magni! Soluta temporibus doloremque quae?
-            Quaerat ab, laboriosam distinctio quisquam aliquid recusandae amet esse alias nemo quae sint praesentium reiciendis atque architecto, ad voluptate quos minus quidem nam iure nobis perspiciatis! Incidunt aspernatur aliquam delectus.
-        </main>
-        <aside>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam corporis quisquam atque consequatur cum ab, nobis fugiat sint ipsa accusantium quod incidunt quas! Asperiores vero facere alias nobis esse perferendis.
-        </aside>
+            <div class="sidebar_left">
+                1
+            </div>                
+            <main>
+                <div class="wrapper_content">
+                    <div class="cover_article">
+                        <div class="cover_gradient"></div>
+                        <picture>
+                            <img src="./img/cover-blog.png" class="cover_img" srcset="" sizes="">
+                        </picture>
+                        <div class="cover_headlines">
+                            <h1 class="cover_title">Module 1</h1>
+                            <h2 class="cover_subtitle">Rendering Logic I</h2>
+                        </div>
+                    </div>
+                    <div class="content_article eIHMrm">
+                        <p class="paragraph">Fundamentally, the goal of CSS is to allow you to control the appearance and layout of your app's
+                            content.
+                          </p>
+                          <p class="paragraph">You don't quite start with a blank canvas; HTML tags do include a few minimal styles. For example, here
+                            are the built-in styles for <code>&lt;a&gt;</code> tags, in Chrome 86:
+
+<pre><code class="language-css">a {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}</code></pre>
+
+                              <p>These styles are part of the <em class="Em-sc-16vyhjn-0 jFzYvi">user-agent stylesheet</em>. Each browser
+                                includes their own stylesheet full of base styles like this. There are some hard rules in the HTML
+                                specification, but for the most part, each browser comes up with its own default styles. That's why focus
+                                rings look so different across browsers!
+                              </p><p>If you've ever used a <button class="UnstyledButton-sblj6o-0 Tooltip__ContentWrapper-sc-1f283ke-1 bVbPSk goaMyX" aria-expanded="false"><span class="Term__Wrapper-e0zul2-0 hNfKpp">CSS reset<span class="Term__Trigger-e0zul2-1 cdndfD">?</span></span></button>, it's to "flatten out" the user-agent
+                                stylesheets across different browsers, and ensure that every browser starts with the same core set of
+                                styles.
+                              </p>
+<pre><code class="language-php">public function store(Request $request){
+    //validar formulario
+    $data = $request->validate([
+        'fullname' => ['required', 'string', 'max:255'],
+        'code' => ['required', 'string', 'max:255', 'unique:users'],
+        'phone' => ['required'],
+        'photo' => [ Rule::when( $request->photo, ['image', 'max:2048'] ) ],
+    ]);
+
+        //Generar contraseña
+        $data['password'] = 'password';
+        $data['photo'] = $request->photo ? request()->file('photo')->store('photos','public') : null;
+
+        //Creamos el usuario
+    $user = User::create($data);
+
+    return back()->with('userCreated', 'El usuario ha sido creado');                    
+}</code></pre>
+                        <p>Notice that there's an <code>&lt;em&gt;</code> tag wrapping around the word <code>you</code>.
+                        </p><p>How come the word <code>you</code> is coloured pink? If you think about it, we haven't applied any styles
+                        to the <code>em</code> element, only to paragraphs.
+                        </p><p>The answer is that <em>certain</em> CSS properties <em class="Em-sc-16vyhjn-0 jFzYvi">inherit</em>. When
+                        I apply a <code>color</code> to an element, that value gets passed down to all children and
+                        grand-children.
+                        </p><p>Not all CSS properties are inheritable, though. Let's look at another example:
+                        </p>
+<pre><code class="language-js">
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = ()=> {
+  const scrollY = window.pageYOffset 
+
+  sections.forEach(current =>{
+    const sectionHeight = current.offsetHeight,
+          sectionTop = current.offsetTop - 58,
+          sectionId = current.getAttribute('id')
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active_link')
+    } else {
+      document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active_link')
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive)
+
+/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono que no sea flecha y el window a this
+    const header = document.getElementById('header')
+    if(window.scrollY >= 80){
+        header.classList.add('scroll_header')
+    } else {
+        header.classList.remove('scroll_header')
+    }
+}
+
+window.addEventListener('scroll', scrollHeader)</code></pre>
+                    </div>
+                </div>
+            </main>
+            <aside class="sidebar_right">
+                3
+            </aside>
        </div>
 
         <!--==================== FOOTER ====================-->
@@ -119,5 +208,6 @@
         
         <!--==================== MAIN JS ====================-->
         <script src="./js/main.js"></script>
+        <script src="./js/prism.js"></script>
     </body>
 </html>
