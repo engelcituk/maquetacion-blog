@@ -63,21 +63,21 @@
             </div>                
             <main>
                 <div class="wrapper_content">
-                    <div class="cover_article">
-                        <div class="cover_gradient"></div>
-                        <picture>
-                            <img src="./img/cover-blog.png" class="cover_img" srcset="" sizes="">
-                        </picture>
-                        <div class="cover_headlines">
-                            <h1 class="cover_title">Module 1</h1>
-                            <h2 class="cover_subtitle">Rendering Logic I</h2>
+                    <div class="article_cover">
+                        <div class="article_gradient"></div>
+                            <picture>
+                                <img src="./img/cover-blog.png" class="article_img" srcset="" sizes="">
+                            </picture>
+                        <div class="article_headlines">
+                            <h1 class="article_title">Module 1</h1>
+                            <h2 class="article_subtitle">Rendering Logic I</h2>
                         </div>
                     </div>
-                    <div class="content_article eIHMrm">
-                        <p class="paragraph">Fundamentally, the goal of CSS is to allow you to control the appearance and layout of your app's
+                    <div class="content_article grid_article">
+                        <p>Fundamentally, the goal of CSS is to allow you to control the appearance and layout of your app's
                             content.
                           </p>
-                          <p class="paragraph">You don't quite start with a blank canvas; HTML tags do include a few minimal styles. For example, here
+                          <p>You don't quite start with a blank canvas; HTML tags do include a few minimal styles. For example, here
                             are the built-in styles for <code>&lt;a&gt;</code> tags, in Chrome 86:
 
 <pre><code class="language-css">a {
@@ -86,11 +86,11 @@
     text-decoration: underline;
 }</code></pre>
 
-                              <p>These styles are part of the <em class="Em-sc-16vyhjn-0 jFzYvi">user-agent stylesheet</em>. Each browser
+                              <p>These styles are part of the <em class="enfasis_em">user-agent stylesheet</em>. Each browser
                                 includes their own stylesheet full of base styles like this. There are some hard rules in the HTML
                                 specification, but for the most part, each browser comes up with its own default styles. That's why focus
                                 rings look so different across browsers!
-                              </p><p>If you've ever used a <button class="UnstyledButton-sblj6o-0 Tooltip__ContentWrapper-sc-1f283ke-1 bVbPSk goaMyX" aria-expanded="false"><span class="Term__Wrapper-e0zul2-0 hNfKpp">CSS reset<span class="Term__Trigger-e0zul2-1 cdndfD">?</span></span></button>, it's to "flatten out" the user-agent
+                              </p><p>If you've ever used a css reset, it's to "flatten out" the user-agent
                                 stylesheets across different browsers, and ensure that every browser starts with the same core set of
                                 styles.
                               </p>
@@ -115,7 +115,7 @@
                         <p>Notice that there's an <code>&lt;em&gt;</code> tag wrapping around the word <code>you</code>.
                         </p><p>How come the word <code>you</code> is coloured pink? If you think about it, we haven't applied any styles
                         to the <code>em</code> element, only to paragraphs.
-                        </p><p>The answer is that <em>certain</em> CSS properties <em class="Em-sc-16vyhjn-0 jFzYvi">inherit</em>. When
+                        </p><p>The answer is that <em>certain</em> CSS properties <em class="enfasis_em">inherit</em>. When
                         I apply a <code>color</code> to an element, that value gets passed down to all children and
                         grand-children.
                         </p><p>Not all CSS properties are inheritable, though. Let's look at another example:
@@ -153,16 +153,19 @@ const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono qu
 window.addEventListener('scroll', scrollHeader)</code></pre>
 
                 <aside class="Aside__InfoAside-nhl37o-1 bnRuYA cAXqSm iOVTZG">
-              <div class="Aside__IconWrapper-nhl37o-5 WWVhl"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg></div><strong class="Aside__Title-nhl37o-4 eeflGT">Chrome's source code</strong>
+                    <div class="Aside__IconWrapper-nhl37o-5 WWVhl">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                <strong class="Aside__Title-nhl37o-4 eeflGT">Chrome's source code</strong>
               <p>If you're curious to learn more about the user-agent stylesheet, you can view the <a target="_blank" rel="noopener noreferrer" href="https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/html/resources/html.css" class="TextLink__Anchor-sc-8b2q1k-0 jxajTe">full stylesheet for the Chrome browser</a>, from its
                 source code.
               </p><p>This stylesheet includes lots of obscure CSS. It's interesting, in an academic sense, but there's not
                 much practical benefit in studying it.</p>
-            </aside>
+                        </aside>
                     </div>
                 </div>
             </main>
