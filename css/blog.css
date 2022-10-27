@@ -104,6 +104,8 @@
 
 .article_title, .article_subtitle{
   color: var(--body-color);
+  color: #fff;
+
 }
 
 .article_title{
@@ -389,7 +391,8 @@ code {
 
 @media (pointer:fine) and (hover:hover) {
   .clBXei:hover {
-    background: var(--first-color)
+    background: hsl(245deg, 100%, 60%);
+    color: #fff;
   }
 }
 
