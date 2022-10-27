@@ -36,17 +36,6 @@
   z-index: 2
 }
 
-.sidebar_right {
-  display: none
-}
-
-@media (min-width:98.1875rem) {
-  .sidebar_right {
-    display: block;
-    margin-top: 167px
-  }
-}
-
 .main_content{
   max-width: 950px;
   transition: transform 400ms ease 0s, opacity 650ms ease 0s;
@@ -448,10 +437,51 @@ code {
   pointer-events: none;  
 }
 
+/* ==========================sidebar derecho============================= */
 
+.sidebar_right {
+  display: none
+}
 
+@media (min-width:98.1875rem) {
+  .sidebar_right {
+    display: block;
+    margin-top: 167px
+  }
+}
 
+.sidebar_right--container {
+  position: sticky;
+  top: 0px;
+  padding: 64px 32px;
+  max-width: 300px
+}
+.sidebar_right--title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--title-color);
+  margin-bottom: 32px;
+  font-weight: var(--font-medium);
+  letter-spacing: 2px
+}
 
+.sidebar_right--link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 250ms ease 0s
+}
 
+.sidebar_right--headone {
+  font-size: 1rem;
+  color: var(--title-color);
+
+}
+
+.sidebar_right--headtwo {
+  font-size: 0.875rem;
+  color: var(--title-color);
+  padding-left: 16px
+}
 
 
