@@ -326,3 +326,55 @@ code {
 .article_note--link:focus:not(:focus-visible) {
   outline: none
 }
+/* ===================ESTILOS SIDEBAR INDICE========================= */
+
+.hHFPra {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  width: 300px;
+  height: 100%;
+  padding-right: 32px;
+  padding-left: 16px;
+  transition: transform 400ms ease 0s, visibility 400ms ease 0s
+}
+
+@media (max-width:64rem) {
+  .hHFPra {
+    visibility: hidden;
+    transform: translateX(-300px)
+  }
+}
+
+.jzoKEe {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  font-weight: var( --font-medium);
+  margin-bottom: 24px
+}
+
+.kYIEPO {
+  display: block;
+  font-size: 1rem;
+  color: var(--title-color);
+  font-weight: var(--font-weight-light)
+}
+
+.cgBkUg {
+  margin-left: -16px;
+  padding-top: 16px;
+  flex: 1 1 0%;
+  overflow: auto;
+  margin-right: -16px;
+  padding-right: 16px
+}
+
+.cmokIB {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 32px;
+  padding-left: 16px
+}
