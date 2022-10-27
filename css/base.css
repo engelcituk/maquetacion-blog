@@ -316,7 +316,7 @@ img {
   }
   
   .footer_link:hover{
-    color: --first-color-lighter
+    color: var(--first-color-lighter)
   }
   
   .footer_social{
