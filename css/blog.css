@@ -331,10 +331,24 @@ code {
 }
 /* ===================ESTILOS SIDEBAR INDICE========================= */
 
-.kyEoac {
+.sidebar_left--wrapper {
   height: 100vh
 }
-.hHFPra {
+
+@media (min-width:48.0625rem) {
+  .sidebar_left--wrapper {
+    position: fixed;
+    top: calc(var(--header-height) + 2rem);
+    bottom: 0px
+  }
+}
+
+@media (min-width:48rem) and (max-width:64rem) {
+  .sidebar_left--wrapper {
+    pointer-events: none
+  }
+}
+.sidebar_left--container {
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -346,27 +360,27 @@ code {
 }
 
 @media (max-width:64rem) {
-  .hHFPra {
+  .sidebar_left--container {
     visibility: hidden;
     transform: translateX(-300px)
   }
 }
 
-.jzoKEe {
+.sidebar_left--headline {
   font-size: 1.25rem;
   color: var(--title-color);
   font-weight: var( --font-medium);
   margin-bottom: 24px
 }
 
-.kYIEPO {
+.sidebar_left--title {
   display: block;
   font-size: 1rem;
   color: var(--title-color);
   font-weight: var(--font-weight-light)
 }
 
-.cgBkUg {
+.sidebar_left--content {
   margin-left: -16px;
   padding-top: 16px;
   flex: 1 1 0%;
@@ -374,47 +388,17 @@ code {
   margin-right: -16px;
   padding-right: 16px
 }
-
-.kgQIZQ {
+/* Posición del contenedor que contiene a los ol*/
+.sidebar_left--list {
   position: relative;
-  transform: translateY(-13px)
+  transform: translateY(-10px)
 }
 
-.dleALd {
+.sidebar_left--list-ol, .sidebar_left--list-li  {
   position: relative
 }
 
-.caQCrV {
-  position: relative
-}
-
-
-@media (pointer:fine) and (hover:hover) {
-  .clBXei:hover {
-    background: hsl(245deg, 100%, 60%);
-    color: #fff;
-  }
-}
-
-.enkmtV {
-  width: 18px;
-  min-width: 18px;
-  height: 18px;
-  transform: translateX(3px);
-  border-radius: 50%;
-  background: hsl(333deg, 100%, 45%)
-}
-
-.dHtDTX {
-  display: block;
-  width: 10px;
-  height: 10px;
-  min-width: 10px;
-  min-height: 10px;
-  pointer-events: none
-}
-
-.clBXei {
+.sidebar_left--list-li-a {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -425,27 +409,46 @@ code {
 }
 
 @media (max-width:98.125rem) {
-  .clBXei {
+  .sidebar_left--list-li-a {
     border-radius: 0px 1000px 1000px 0px
   }
 }
 
-.kjtlOy {
-  width: 12px;
-  min-width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--color-gray-300)
+@media (pointer:fine) and (hover:hover) {
+  .sidebar_left--list-li-a:hover {
+    background: hsl(245deg, 100%, 60%);
+    color: #fff;
+  }
 }
 
-.fVluPr {
-  display: block;
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
-  min-height: 16px;
-  pointer-events: none
+.sidebar_left--item-active-dot {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  transform: translateX(3px);
+  border-radius: 50%;
+  background: hsl(333deg, 100%, 45%)
 }
+
+.sidebar_left--item-not-active-dot {
+  width: 18px;
+  min-width: 18px;
+  height: 18px;
+  transform: translateX(3px);
+  border-radius: 50%;
+  background: hsla(210, 6%, 87%, 1)
+}
+
+.sidebar_left--item-span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  pointer-events: none;  
+}
+
+
 
 
 
