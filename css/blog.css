@@ -203,12 +203,12 @@ p {
 .article_copy-code{  
   text-align: right;
 }
-.button{
+.button-copy{
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: .2rem;
   font-size: var(--font-medium);
   cursor: pointer;
   border: 0;
