@@ -447,13 +447,13 @@ code {
 @media (min-width:98.1875rem) {
   .sidebar_right {
     display: block;
-    margin-top: 167px
+    margin-top: 50px
   }
 }
 
 .sidebar_right--container {
   position: sticky;
-  top: 0px;
+  top: 15px;
   padding: 64px 32px;
   max-width: 300px
 }
