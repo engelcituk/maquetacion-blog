@@ -62,6 +62,7 @@ const scrollHeader = () => { //ToDO si presenta problemas, cambiar a funciono qu
 }
 
 window.addEventListener('scroll', scrollHeader)
+
 /*==================== SHOW SCROLL UP ====================*/ 
 const scrollUp = () => {
     const scrollUp = document.getElementById('scroll-up')
