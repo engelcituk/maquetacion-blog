@@ -31,7 +31,7 @@ body{
     background-color: var(--primary-color);
 }
 
-body.dark{
+body.dark-theme{
     --primary-color: #3A3B3C;
     --panel-color: #242526;
     --text-color: #CCC;
@@ -60,8 +60,8 @@ body.dark{
     background: #0b3cc1;
 }
 
-body.dark::-webkit-scrollbar-thumb:hover,
-body.dark .activity-data::-webkit-scrollbar-thumb:hover{
+body.dark-theme::-webkit-scrollbar-thumb:hover,
+body.dark-theme .activity-data::-webkit-scrollbar-thumb:hover{
     background: #3A3B3C;
 }
 
@@ -140,7 +140,7 @@ nav .menu-items{
     background-color: var(--primary-color);
 }
 
-body.dark li a:hover::before{
+body.dark-theme li a:hover::before{
     background-color: var(--text-color);
 }
 
@@ -170,7 +170,7 @@ nav.close li a .link-name{
     color: var(--primary-color);
 }
 
-body.dark .nav-links li a:hover i, body.dark .nav-links li a:hover .link-name{
+body.dark-theme .nav-links li a:hover i, body.dark-theme .nav-links li a:hover .link-name{
     color: var(--text-color);    
 }
 
@@ -218,7 +218,7 @@ body.dark .nav-links li a:hover i, body.dark .nav-links li a:hover .link-name{
     transition: var(--tran-03);
 }
 
-body.dark .switch::before{
+body.dark-theme .switch::before{
     left: 20px;
 }
 

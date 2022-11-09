@@ -1,24 +1,24 @@
 const body = document.querySelector("body"),
-      modeToggle = body.querySelector(".mode-toggle");
-      sidebar = body.querySelector("nav");
-      sidebarToggle = body.querySelector(".sidebar-toggle");
+      modeToggle = body.querySelector(".mode-toggle")
+      sidebar = body.querySelector("nav")
+      sidebarToggle = body.querySelector(".sidebar-toggle")
 
-let getMode = localStorage.getItem("mode");
-if(getMode && getMode ==="dark"){
+let selectedTheme = localStorage.getItem("selected-theme")
+if(selectedTheme && selectedTheme ==="dark"){
     body.classList.toggle("dark");
 }
 
 let getStatus = localStorage.getItem("status");
-if(getStatus && getStatus ==="close"){
+if(getStatus && getStatus === "close" ){
     sidebar.classList.toggle("close");
 }
 
 modeToggle.addEventListener("click", () =>{
-    body.classList.toggle("dark");
-    if(body.classList.contains("dark")){
-        localStorage.setItem("mode", "dark");
+    body.classList.toggle("dark-theme");
+    if(body.classList.contains("dark-theme")){
+        localStorage.setItem("selected-theme", "dark");
     }else{
-        localStorage.setItem("mode", "light");
+        localStorage.setItem("selected-theme", "light");
     }
 });
 
