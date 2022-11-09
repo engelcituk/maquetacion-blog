@@ -99,6 +99,11 @@
   cursor: pointer;
 }
 
+.button--flex{
+  display: inline-flex;
+  align-items: center;
+}
+
 .button:hover{
   background-color:var(--first-color-alt);
 }
