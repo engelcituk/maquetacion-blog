@@ -4,8 +4,10 @@ const body = document.querySelector("body"),
       sidebarToggle = body.querySelector(".sidebar-toggle")
 
 let selectedTheme = localStorage.getItem("selected-theme")
-if(selectedTheme && selectedTheme ==="dark"){
-    body.classList.toggle("dark");
+
+if(selectedTheme && selectedTheme === "dark" ){
+    body.classList.toggle('dark-theme')
+    localStorage.setItem('bx-moon')
 }
 
 let getStatus = localStorage.getItem("status");
@@ -13,12 +15,14 @@ if(getStatus && getStatus === "close" ){
     sidebar.classList.toggle("close");
 }
 
-modeToggle.addEventListener("click", () =>{
-    body.classList.toggle("dark-theme");
-    if(body.classList.contains("dark-theme")){
-        localStorage.setItem("selected-theme", "dark");
-    }else{
-        localStorage.setItem("selected-theme", "light");
+modeToggle.addEventListener('click', () =>{
+    body.classList.toggle('dark-theme');
+    if(body.classList.contains('dark-theme')){
+        localStorage.setItem('selected-theme', 'dark')
+        localStorage.setItem('selected-icon', 'bx-moon')
+    } else {
+        localStorage.setItem('selected-theme', 'light')
+        localStorage.setItem('selected-icon', 'bx-sun')
     }
 });
 
