@@ -7,7 +7,7 @@ let selectedTheme = localStorage.getItem("selected-theme")
 
 if(selectedTheme && selectedTheme === "dark" ){
     body.classList.toggle('dark-theme')
-    localStorage.setItem('bx-moon')
+    localStorage.setItem('selected-icon', 'bx-moon')
 }
 
 let getStatus = localStorage.getItem("status");

@@ -1,68 +1,11 @@
 /* ===== Google Font Import - Poppins ===== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+@import "base-admin.css";
 
-:root{
-    /* ===== Colors ===== */
-    --primary-color: #0E4BF1;
-    --panel-color: #FFF;
-    --text-color: #000;
-    --black-light-color: #707070;
-    --border-color: #e6e5e5;
-    --toggle-color: #DDD;
-    --box1-color: #4DA3FF;
-    --box2-color: #FFE6AC;
-    --box3-color: #E7D1FC;
-    --title-icon-color: #fff;
-    
-    /* ====== Transition ====== */
-    --tran-05: all 0.5s ease;
-    --tran-03: all 0.3s ease;
-    --tran-02: all 0.2s ease;
-}
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
-}
-
-body.dark-theme{
-    --primary-color: #3A3B3C;
-    --panel-color: #242526;
-    --text-color: #CCC;
-    --black-light-color: #CCC;
-    --border-color: #4D4C4C;
-    --toggle-color: #FFF;
-    --box1-color: #3A3B3C;
-    --box2-color: #3A3B3C;
-    --box3-color: #3A3B3C;
-    --title-icon-color: #CCC;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #0b3cc1;
-}
-
-body.dark-theme::-webkit-scrollbar-thumb:hover,
-body.dark-theme .activity-data::-webkit-scrollbar-thumb:hover{
-    background: #3A3B3C;
+    background-color: var(--first-color);
 }
 
 nav {
@@ -72,7 +15,7 @@ nav {
     height: 100%;
     width: 250px;
     padding: 10px 18px;
-    background-color: var(--panel-color);
+    background-color: var(--body-color);
     border-right: 1px solid var(--border-color);
     /* border: 1px solid red; */
     transition: var(--tran-05);
@@ -127,7 +70,7 @@ nav .menu-items{
     height: 50px;
     text-decoration: none;  
     position: relative;
-    /* border: 1px solid red;   */
+    /* border: 1px solid red;   */  
 }
 
 .nav-links li a:hover::before{
@@ -137,7 +80,7 @@ nav .menu-items{
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--first-color);
 }
 
 body.dark-theme li a:hover::before{
@@ -151,13 +94,13 @@ body.dark-theme li a:hover::before{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--black-light-color);
+    color: var(--title-color);
 }
 
 .menu-items li a .link-name{
     font-size: 18px;
     font-weight: 400;
-    color: var(--black-light-color);
+    color: var(--title-color);
     transition: var(--tran-05);
 }
 /* cuando se cierra el nav */
@@ -167,7 +110,7 @@ nav.close li a .link-name{
 }
 
 .nav-links li a:hover i, .nav-links li a:hover .link-name{
-    color: var(--primary-color);
+    color: var(--first-color);
 }
 
 body.dark-theme .nav-links li a:hover i, body.dark-theme .nav-links li a:hover .link-name{
@@ -213,7 +156,7 @@ body.dark-theme .nav-links li a:hover i, body.dark-theme .nav-links li a:hover .
     transform: translateY(-50%);
     height: 15px;
     width: 15px;
-    background-color: var(--panel-color);
+    background-color: var(--body-color);
     border-radius: 50%;
     transition: var(--tran-03);
 }
@@ -225,7 +168,7 @@ body.dark-theme .switch::before{
 .dashboard{
     position: relative;
     left: 250px;
-    background-color: var(--panel-color);
+    background-color: var(--body-color);
     min-height: 100vh; /**/
     width: calc(100% - 250px); /*250px es la medida del sidebar*/
     padding: 10px 14px;
@@ -246,7 +189,7 @@ nav.close ~ .dashboard {
     width: calc(100% - 250px);
     justify-content: space-between;
     padding: 10px 14px;
-    background-color: var(--panel-color);
+    background-color: var(--body-color);
     transition: var(--tran-05);
     z-index: 10;
 
@@ -275,13 +218,14 @@ nav.close ~ .dashboard .top{
 .top .search-box input{
     position: absolute;
     border: 1px solid var(--border-color);
-    background-color: var(--panel-color);
+    background-color: var(--input-color);
     padding: 0 25px 0 50px;
     border-radius: 5px;
     height: 100%;
     width: 100%;
-    color: var(--text-color);
     font-size: 15px;
+    color: var(--text-color);
+    font-family: var(--body-font);
     font-weight: 400;
     outline: none;
 
@@ -294,7 +238,7 @@ nav.close ~ .dashboard .top{
     z-index: 10;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--black-light-color);
+    color: var(--text-color-light);
 }
 
 .top img{
@@ -317,7 +261,7 @@ nav.close ~ .dashboard .top{
     position: relative;
     height: 35px;
     width: 35px;
-    background-color: var(--primary-color);
+    background-color: var(--first-color);
     border-radius: 6px;
     color: var(--title-icon-color);
     display: flex;
@@ -349,23 +293,24 @@ nav.close ~ .dashboard .top{
     padding: 15px 20px;
     background-color: var(--box1-color);
     transition: var(--tran-05);
+    
 }
 
 .boxes .box i{
     font-size: 35px;
-    color: var(--text-color);
+    color: var(--title-color);
 }
 .boxes .box .text{
     white-space: nowrap;
     font-size: 18px;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--title-color);
 }
 
 .boxes .box .number{    
     font-size: 40px;
     font-weight: 500;
-    color: var(--text-color);
+    color: var(--title-color);
 }
 
 .boxes .box.box2{

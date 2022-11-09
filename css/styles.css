@@ -149,7 +149,7 @@
   width: 100%;
   background-color: var(--input-color);
   color: var(--text-color);
-  font-family: var(--body-color);
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   border: none;
   outline: none;
