@@ -70,10 +70,29 @@ nav .menu-items{
     height: 50px;
     text-decoration: none;  
     position: relative;
-    /* border: 1px solid red;   */  
+    transition: .5;
+
+    /* border: 1px solid red;     */
 }
 
-.nav-links li a:hover::before{
+.menu-items li a .drop{
+    position: absolute;
+    right: 0;
+}
+
+.menu-items .childs{
+    display: none;
+    /* flex-direction: column; */
+    /* margin-left: .2rem; */
+}
+
+.showCollapse{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Para añadir un dot en el menu */
+/* .nav-links li a:hover::before{
     content: '';
     position: absolute;
     left: -7px;
@@ -81,7 +100,7 @@ nav .menu-items{
     width: 5px;
     border-radius: 50%;
     background-color: var(--first-color);
-}
+} */
 
 body.dark-theme li a:hover::before{
     background-color: var(--text-color);
@@ -97,24 +116,30 @@ body.dark-theme li a:hover::before{
     color: var(--title-color);
 }
 
+ul li a{
+    color: var(--title-color) ;
+}
+
+ul li a:hover{
+    border-radius: .5rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+}
+
 .menu-items li a .link-name{
     font-size: 18px;
     font-weight: 400;
-    color: var(--title-color);
     transition: var(--tran-05);
 }
+
 /* cuando se cierra el nav */
 nav.close li a .link-name{
     opacity: 0;
     pointer-events: none;
 }
 
-.nav-links li a:hover i, .nav-links li a:hover .link-name{
-    color: var(--first-color);
-}
-
 body.dark-theme .nav-links li a:hover i, body.dark-theme .nav-links li a:hover .link-name{
-    color: var(--text-color);    
+    color: var(--body-color);    
 }
 
 .menu-items .logout-mode{

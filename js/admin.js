@@ -45,3 +45,18 @@ const scrollUp = () => {
     }
   }
   window.addEventListener('scroll', scrollUp) 
+
+/*==================== COLLAPSE MENU ====================*/ 
+skillsHeader = document.querySelectorAll('.collapse')
+
+function toggleSkills() {
+    let itemClass = this.childNodes[3].className
+    if(itemClass === 'childs'){
+        this.childNodes[3].className = 'showCollapse' 
+    }
+}
+
+skillsHeader.forEach( (el) => {
+    el.addEventListener('click', toggleSkills )
+})
+
