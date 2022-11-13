@@ -70,7 +70,7 @@ nav .menu-items{
     height: 50px;
     text-decoration: none;  
     position: relative;
-    transition: .5;
+    transition: .5s;
 
     /* border: 1px solid red;     */
 }
@@ -89,6 +89,7 @@ nav .menu-items{
 .showCollapse{
     display: flex;
     flex-direction: column;
+    transition: .5s;    
 }
 
 /* Para añadir un dot en el menu */
@@ -114,6 +115,8 @@ body.dark-theme li a:hover::before{
     align-items: center;
     justify-content: center;
     color: var(--title-color);
+    transition: var(--tran-05);
+
 }
 
 ul li a{
