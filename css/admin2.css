@@ -128,7 +128,7 @@ img {
 .nav{
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%; /*Esto lo mantiene oculto por default*/
     height: 100vh;
     padding: 1rem 1rem 3rem;
     background-color: var(--container-color);
@@ -202,7 +202,6 @@ img {
     overflow: hidden;
     max-height: 21px;
     transition: .4s ease-in-out;
-
 }
 
 .nav__dropdown-collapse{
@@ -238,14 +237,19 @@ img {
     max-height: 100rem;
 }
 
+
+/* ===============ROTATE ICON ARROW================= */
 .nav__dropdown:hover .nav__dropdown-icon{
     transform: rotate(180deg);
 }
 
-/* ===============ROTATE ICON ARROW================= */
-
-
 /* ==================SHOW MENU============== */
 
+.show-menu{
+    left: 0;
+}
 
 /* ==================ACTIVE LINK============== */
+.active{
+    color: var(--first-color);
+}
